@@ -1,0 +1,16 @@
+{
+  "id": "1k17rbr",
+  "title": "I hate \"my\" \"field\" (machine learning)",
+  "selftext": "A lot of people (like me) dive  into ML thinking it's about understanding intelligence, learning, or even just clever math — and then they wake up buried under a pile of frameworks, configs, random seeds, hyperparameter grids, and Google Colab crashes. And the worst part? No one tells you how undefined the field really is until you're *knee-deep in the swamp.*\n\nIn mathematics:\n\n* There's structure. Rigor. A kind of calm beauty in clarity.\n* You can prove something and *know* it’s true.\n* You explore the unknown, yes — but on solid ground.\n\nIn ML:\n\n* You fumble through a foggy mess of tunable knobs and lucky guesses.\n* “Reproducibility” is a fantasy.\n* Half the field is just “what worked better for us” and the other half is trying to explain it *after* the fact.\n* Nobody *really* knows why half of it works, and yet they act like they do.",
+  "author": "Substantial-Art-2238",
+  "subreddit": "PhD",
+  "created_utc": "2025-04-17T09:23:23",
+  "score": 901,
+  "upvote_ratio": 0.98,
+  "num_comments": 143,
+  "permalink": "/r/PhD/comments/1k17rbr/i_hate_my_field_machine_learning/",
+  "url": "https://www.reddit.com/r/PhD/comments/1k17rbr/i_hate_my_field_machine_learning/",
+  "is_self": true,
+  "link_flair_text": "Vent",
+  "retrieved_at": "2025-10-04T21:23:12.611625"
+}

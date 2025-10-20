@@ -1,0 +1,18 @@
+{
+  "id": "1nwanih",
+  "title": "[D] Multi-market retail dataset for computer vision - 1M images, temporally organised by year",
+  "selftext": "Hello all. I am sharing details about a retail focused dataset we've assembled that might interest folks working on production CV systems:\n\n**Quick specs:**\n\n* 1M retail interior images (280K structured, 720K available for processing) but all are structured and organised. 280k are our platinum set.\n* Multi-country: UK, US, Netherlands, Ireland, Germany. Mainly UK/US.\n* Temporal organisation: Year/month categorization spanning multiple years, also by retailer and week too.\n* Hierarchical structure: Year > Season > Retailer > Sub-Category (event specific) and often by month and week for Christmas.\n* Real-world conditions: Various lighting, angles, store formats.\n* Perfectly imperfect world of retail, all images taken for our consulting work, so each image has a story, good, bad, indifferent. \n\n**Why this might matter:** Most retail CV benchmarks (SKU110K, RP2K, etc.) are single market or synthetic. Real deployment requires models that handle:\n\n* Cross-retailer variation (Tesco ≠ Walmart ≠ Sainsburys et al)\n* Temporal shifts (seasonal merchandising, promotional displays, COVID we have too)\n* Geographic differences (EU vs US labeling, store formats)\n\n**Research applications:**\n\n* Domain adaptation across retail environments\n* Few shot learning for new product categories\n* Temporal consistency in object detection\n* Transfer learning benchmarks\n* Dates on product, reduction labels, out of stock, lows, highs.\n\n**Commercial applications:**\n\n* Training production planogram compliance systems\n* Autonomous checkout model training\n* Inventory management CV pipelines\n* Retail execution monitoring\n* Numerous other examples that could be developerd.\n\nAvailable for licensing (commercial) and academic partnerships. Can provide samples and detailed breakdown under NDA with a controlled sample available. \n\nCurious about the community's thoughts on what annotations would add most value - we can support custom categorisation and labelling work. \n\nIt's a new world for us in terms of licensing, we are retailers at heart but we know that 1m images from 2010 to today represents a really unique dataset.",
+  "author": "malctucker",
+  "subreddit": "MachineLearning",
+  "created_utc": "2025-10-02T18:46:18",
+  "score": 0,
+  "upvote_ratio": 0.42,
+  "num_comments": 0,
+  "permalink": "/r/MachineLearning/comments/1nwanih/d_multimarket_retail_dataset_for_computer_vision/",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1nwanih/d_multimarket_retail_dataset_for_computer_vision/",
+  "is_self": true,
+  "is_video": false,
+  "over_18": false,
+  "link_flair_text": "Project",
+  "retrieved_at": "2025-10-04T12:13:30.257095"
+}

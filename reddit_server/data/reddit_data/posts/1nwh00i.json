@@ -1,0 +1,18 @@
+{
+  "id": "1nwh00i",
+  "title": "Are LLMs necessary to get a job?",
+  "selftext": "For someone laid off in 2023 before the LLM/Agent craze went mainstream, do you think I need to learn LLM architecture? Are certs or github projects worth anything as far as getting through the filters and/or landing a job?  \n\nI have 10 YOE. I specialized in machine learning at the start, but the last 5 years of employment, I was at a FAANG company and didnt directly own any ML stuff. It seems \"traditional\" ML demand, especially without LLM knowledge, is almost zero. I've had some interviews for roles focused on experimentation, but no offers.    \nI can't tell whether my previous experience is irrelevant now. I deployed \"deep\" learning pipelines with basic MLOps. I did a lot of predictive analytics, segmentation, and data exploration with ML.  \n\nI understand the landscape and tech OK, but it seems like every job description now says you need direct experience with agentic frameworks, developing/optimizing/tuning LLMs, and using orchestration frameworks or advanced MLOps. I don't see how DS could have changed enough in two years that every candidate has on-the-job experience with this now.  \n\nIt seems like actually getting confident with the full stack/architecture would take a 6 month course or cert. Ive tried shorter trainings and free content... and it seems like everyone is just learning \"prompt engineering,\" basic RAG with agents, and building chatbots without investigating the underlying architecture at all.  \n\nAre the job descriptions misrepresenting the level of skill needed or am I just out of the loop?",
+  "author": "br0monium",
+  "subreddit": "datascience",
+  "created_utc": "2025-10-02T22:43:00",
+  "score": 64,
+  "upvote_ratio": 0.8,
+  "num_comments": 57,
+  "permalink": "/r/datascience/comments/1nwh00i/are_llms_necessary_to_get_a_job/",
+  "url": "https://www.reddit.com/r/datascience/comments/1nwh00i/are_llms_necessary_to_get_a_job/",
+  "is_self": true,
+  "link_flair_text": "Career | US",
+  "retrieved_at": "2025-10-04T13:27:22.905005",
+  "is_video": false,
+  "over_18": false
+}

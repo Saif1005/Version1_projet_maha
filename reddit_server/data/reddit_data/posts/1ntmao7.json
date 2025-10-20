@@ -1,0 +1,18 @@
+{
+  "id": "1ntmao7",
+  "title": "Why would I not use Visual Studio code",
+  "selftext": "I’m doing a college project that wants me to use Mobaxterm for my terminal and WinSCP to transfer files and I’m using a college provided Linux server. In mobaxterm I use a code editor called nedit. \n\nI’ve used VSC on a project before and it was so much easier , and everything was built in one. I told the professor and he said well you could but I think this is better. \n\nI’m confused how this slow multi step process can be better than VSC?\n\n(This is a bioinformatics project using biopython)",
+  "author": "saddickstic",
+  "subreddit": "Python",
+  "created_utc": "2025-09-29T17:14:14",
+  "score": 273,
+  "upvote_ratio": 0.86,
+  "num_comments": 173,
+  "permalink": "/r/Python/comments/1ntmao7/why_would_i_not_use_visual_studio_code/",
+  "url": "https://www.reddit.com/r/Python/comments/1ntmao7/why_would_i_not_use_visual_studio_code/",
+  "is_self": true,
+  "link_flair_text": "Discussion",
+  "retrieved_at": "2025-10-04T13:19:27.117694",
+  "is_video": false,
+  "over_18": false
+}

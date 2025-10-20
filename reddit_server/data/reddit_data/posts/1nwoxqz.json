@@ -1,0 +1,18 @@
+{
+  "id": "1nwoxqz",
+  "title": "[R] New paper: LLMs don't have privileged self knowledge, which means we can efficiently train a General Correctness Model to predict the correctness of multiple models. Surprising or expected?",
+  "selftext": "Quick paper highlight (adapted from TLDR thread):  \nFinds no special advantage using an LLM to predict its own correctness (a trend in prior work), instead finding that LLMs benefit from learning to predict the correctness of many other models – becoming a GCM.  \n\\--  \nTraining 1 GCM is strictly more accurate than training model-specific CMs for all models it trains on (including CMs trained to predict their own correctness).  \nGCM transfers without training to outperform direct training on OOD models and datasets.  \nGCM (based on Qwen3-8B) achieves +30% coverage on selective prediction vs much larger Llama-3-70B’s logits.\n\nTLDR thread: [https://x.com/hanqi\\_xiao/status/1973088476691042527](https://x.com/hanqi_xiao/status/1973088476691042527)  \nFull paper: [https://arxiv.org/html/2509.24988v1](https://arxiv.org/html/2509.24988v1)\n\n**Discussion Seed**:  \nPrevious works have suggested / used LLMs having self knowledge, e.g., identifying/preferring their own generations \\[https://arxiv.org/abs/2404.13076\\], or ability to predict their uncertainty. But paper claims specifically that LLMs don't have knowledge about their own *correctness.* Curious on everyone's intuition for what LLMs have / does not have self knowledge about, and whether this result fit your predictions.\n\nConflict of Interest:   \nAuthor is making this post. ",
+  "author": "Envoy-Insc",
+  "subreddit": "MachineLearning",
+  "created_utc": "2025-10-03T04:52:19",
+  "score": 21,
+  "upvote_ratio": 0.75,
+  "num_comments": 10,
+  "permalink": "/r/MachineLearning/comments/1nwoxqz/r_new_paper_llms_dont_have_privileged_self/",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1nwoxqz/r_new_paper_llms_dont_have_privileged_self/",
+  "is_self": true,
+  "is_video": false,
+  "over_18": false,
+  "link_flair_text": "Research",
+  "retrieved_at": "2025-10-04T12:13:30.257086"
+}

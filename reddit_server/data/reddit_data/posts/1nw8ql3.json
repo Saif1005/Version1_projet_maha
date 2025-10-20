@@ -1,0 +1,18 @@
+{
+  "id": "1nw8ql3",
+  "title": "[D] Will fine-tuning LLaMA 3.2 11B Instruct on text-only data degrade its vision capabilities?",
+  "selftext": "I'm planning to fine-tune LLaMA 3.2 11B Instruct on a JSONL dataset of domain-specific question-answer pairs — purely text, no images. The goal is to improve its instruction-following behavior for specialized text tasks, while still retaining its ability to handle multimodal inputs like OCR and image-based queries.\n\nMy concern: will this fine-tuning lead to multimodal forgetting?\n\nThe NeurIPS 2024 paper discusses how training on more image-text pairs can cause text-only forgetting. So I’m wondering — does the reverse happen too? If I train only on text, will the model lose its ability to process images or degrade in tasks like OCR?\n\nHas anyone observed this kind of modality drift or tested the impact of unimodal fine-tuning on multimodal performance?",
+  "author": "PravalPattam12945RPG",
+  "subreddit": "MachineLearning",
+  "created_utc": "2025-10-02T17:35:46",
+  "score": 7,
+  "upvote_ratio": 0.89,
+  "num_comments": 7,
+  "permalink": "/r/MachineLearning/comments/1nw8ql3/d_will_finetuning_llama_32_11b_instruct_on/",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1nw8ql3/d_will_finetuning_llama_32_11b_instruct_on/",
+  "is_self": true,
+  "is_video": false,
+  "over_18": false,
+  "link_flair_text": "Discussion",
+  "retrieved_at": "2025-10-04T12:13:30.257109"
+}

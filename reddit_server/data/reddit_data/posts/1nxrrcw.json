@@ -1,0 +1,18 @@
+{
+  "id": "1nxrrcw",
+  "title": "What could be my next career progression?",
+  "selftext": "Hello, I'm 26 years old been working as a junior data scientist in marketing for the past two years and I'm a bit bored/ have no idea how to progress further in my career.\n\nCurrently I do end to end modeling, from gathering data up to production (not in the most data sciency way since I'm very limited in terms of tools but my models are being effectively used by other departments). \n\nI have built 5 different models: propensity score models, customer segmentation, churn models and a time series forecasting model.\n\nAll my job has been revolving around developing, validating, monitoring and updating these models I have built with the current tools I have available.\n\nI realise I'm already privileged in terms of what I'm doing. It's my first job and already developing models end to end in a company that recognises their usefulness and I'm pretty much free to take any decision about them.\n\nHowever, I would love to advance further since the my job is starting to get a bit repetitive.\nIn terms of innovating further my workflow I realised it's actually pretty much impossible. The company IT is stagnant and any time I asked for anything, like introducing MlFlow in my sagemaker flow (YES, from development to \"production\" is done in sagemaker using notebooks. I understand and have faced many of the problems that come out of this) or Airflow or anything else, the request has never gotten anywhere.\nThe size of the company and the IT privileges setup makes it impossible for me to take the innovation in my own hands and do as I please. I've tried lots of technical workarounds and loopholes but not very successfully.\n\n\nI don't feel confident enough now take a more senior position, nor there is the possibility at my current job. My boss is not directly involved in modeling stuff and don't really have anyone I can go to with career progression questions.\n\nI feel like I kinda already reached the end of progression and I'm pretty much lost in terms of what I can do, other than ask for various tools to make the pipeline up to current standards (which will not have an impact in terms of how the output will be used by other departments and profits).\n\nI understand it's an open ended question, but what else could I do to advance?",
+  "author": "Gaston154",
+  "subreddit": "datascience",
+  "created_utc": "2025-10-04T12:43:06",
+  "score": 4,
+  "upvote_ratio": 1.0,
+  "num_comments": 2,
+  "permalink": "/r/datascience/comments/1nxrrcw/what_could_be_my_next_career_progression/",
+  "url": "https://www.reddit.com/r/datascience/comments/1nxrrcw/what_could_be_my_next_career_progression/",
+  "is_self": true,
+  "link_flair_text": "Discussion",
+  "retrieved_at": "2025-10-04T13:27:22.904958",
+  "is_video": false,
+  "over_18": false
+}

@@ -1,0 +1,18 @@
+{
+  "id": "1nwwsk7",
+  "title": "[P] I am building a ML job board",
+  "selftext": "Hey fellow ML people!\n\nLast year, I shared with you a job board for [FAANG positions](https://www.reddit.com/r/MachineLearning/comments/1ia7feh/p_made_a_faang_job_postings_aggregator_for_ai/) and due to the positive feedback I received, I had been working on expanded version called [hire.watch](https://hire.watch/?categories=AI+_+Machine+Learning)\n\nThe goal is provide a unified search experience - it crawls, cleans and extracts data, allowing filtering by:\n\n1. Full-text search\n2. Location - on-site\n3. Remote - from a given city, US state, EU, etc.\n4. Category - you can check out the machine learning category here: [https://hire.watch/?categories=AI+\\_+Machine+Learning](https://hire.watch/?categories=AI+_+Machine+Learning)\n5. Years of experience and seniority\n6. Target gross salary\n7. Date posted and date modified\n\nI used the normal ML ecosystem (scikit learn, huggingface transformers, LLMs, etc.) to build it, and Plotly Dash for the UI.\n\nLet me know what you think - feel free to ask questions and request features :)",
+  "author": "dev-ai",
+  "subreddit": "MachineLearning",
+  "created_utc": "2025-10-03T12:42:47",
+  "score": 7,
+  "upvote_ratio": 0.61,
+  "num_comments": 0,
+  "permalink": "/r/MachineLearning/comments/1nwwsk7/p_i_am_building_a_ml_job_board/",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1nwwsk7/p_i_am_building_a_ml_job_board/",
+  "is_self": true,
+  "is_video": false,
+  "over_18": false,
+  "link_flair_text": "Project",
+  "retrieved_at": "2025-10-04T12:13:30.257083"
+}

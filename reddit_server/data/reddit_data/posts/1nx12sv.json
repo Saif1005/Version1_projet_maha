@@ -1,0 +1,18 @@
+{
+  "id": "1nx12sv",
+  "title": "How to Level Up Your Python Logs with Structlog",
+  "selftext": "For modern applications, structured and context-aware logging is essential for observability. [Structlog](https://www.structlog.org/) is one of the better tools in the Python ecosystem for achieving this with a more intuitive model than the standard logging's system of handlers, formatters, and filters.\n\n[I wrote a guide](https://www.dash0.com/guides/python-logging-with-structlog) that provides a step-by-step walkthrough for implementing clean, production-ready logging with Structlog.\n\nKeen to hear your thoughts, and if you think it's worth switching to from the `logging` module.",
+  "author": "finallyanonymous",
+  "subreddit": "Python",
+  "created_utc": "2025-10-03T15:43:30",
+  "score": 8,
+  "upvote_ratio": 0.69,
+  "num_comments": 5,
+  "permalink": "/r/Python/comments/1nx12sv/how_to_level_up_your_python_logs_with_structlog/",
+  "url": "https://www.reddit.com/r/Python/comments/1nx12sv/how_to_level_up_your_python_logs_with_structlog/",
+  "is_self": true,
+  "is_video": false,
+  "over_18": false,
+  "link_flair_text": "Tutorial",
+  "retrieved_at": "2025-10-04T12:05:17.468096"
+}

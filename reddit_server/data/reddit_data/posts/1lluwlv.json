@@ -1,0 +1,16 @@
+{
+  "id": "1lluwlv",
+  "title": "Data Science Has Become a Pseudo-Science",
+  "selftext": "I’ve been working in data science for the last ten years, both in industry and academia, having pursued a master’s and PhD in Europe. My experience in the industry, overall, has been very positive. I’ve had the opportunity to work with brilliant people on exciting, high-impact projects. Of course, there were the usual high-stress situations, nonsense PowerPoints, and impossible deadlines, but the work largely felt meaningful.\n\nHowever, over the past two years or so, it feels like the field has taken a sharp turn. Just yesterday, I attended a technical presentation from the analytics team. The project aimed to identify anomalies in a dataset composed of multiple time series, each containing a clear inflection point. The team’s hypothesis was that these trajectories might indicate entities engaged in some sort of fraud.\n\nThe team claimed to have solved the task using “generative AI”. They didn’t go into methodological details but presented results that, according to them, were amazing. Curious, nespecially since the project was heading toward deployment, i asked about validation, performance metrics, or baseline comparisons. None were presented.\n\nLater, I found out that “generative AI” meant asking ChatGPT to generate a code. The code simply computed the mean of each series before and after the inflection point, then calculated the z-score of the difference. No model evaluation. No metrics. No baselines. Absolutely no model criticism. Just a naive approach, packaged and executed very, very quickly under the label of generative AI.\n\nThe moment I understood the proposed solution, my immediate thought was \"I need to get as far away from this company as possible\". I share this anecdote because it summarizes much of what I’ve witnessed in the field over the past two years. It feels like data science is drifting toward a kind of pseudo-science where we consult a black-box oracle for answers, and questioning its outputs is treated as anti-innovation, while no one really understand how the outputs were generated.\n\nAfter several experiences like this, I’m seriously considering focusing on academia. Working on projects like these is eroding any hope I have in the field. I know this won’t work and yet, the label generative AI seems to make it unquestionable. So I came here to ask if is this experience shared among other DSs?\n\n",
+  "author": "Raz4r",
+  "subreddit": "datascience",
+  "created_utc": "2025-06-27T15:11:44",
+  "score": 2730,
+  "upvote_ratio": 0.98,
+  "num_comments": 354,
+  "permalink": "/r/datascience/comments/1lluwlv/data_science_has_become_a_pseudoscience/",
+  "url": "https://www.reddit.com/r/datascience/comments/1lluwlv/data_science_has_become_a_pseudoscience/",
+  "is_self": true,
+  "link_flair_text": "Discussion",
+  "retrieved_at": "2025-10-04T13:26:09.128493"
+}

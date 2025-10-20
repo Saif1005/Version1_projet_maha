@@ -1,0 +1,362 @@
+{
+  "posts": {
+    "1jadp27": {
+      "file": "data/reddit_data/posts/1jadp27.json",
+      "subreddit": "mildlyinfuriating",
+      "stored_at": "2025-10-04T11:51:20.863297"
+    },
+    "o0fpuq": {
+      "file": "data/reddit_data/posts/o0fpuq.json",
+      "subreddit": "interestingasfuck",
+      "stored_at": "2025-10-04T11:51:20.870173"
+    },
+    "fr4qr7": {
+      "file": "data/reddit_data/posts/fr4qr7.json",
+      "subreddit": "AskReddit",
+      "stored_at": "2025-10-04T11:51:20.893731"
+    },
+    "1gxuyu8": {
+      "file": "data/reddit_data/posts/1gxuyu8.json",
+      "subreddit": "Weird",
+      "stored_at": "2025-10-04T11:51:20.903540"
+    },
+    "khbnzn": {
+      "file": "data/reddit_data/posts/khbnzn.json",
+      "subreddit": "todayilearned",
+      "stored_at": "2025-10-04T11:51:20.922771"
+    },
+    "1nstje8": {
+      "file": "data/reddit_data/posts/1nstje8.json",
+      "subreddit": "Python",
+      "stored_at": "2025-10-04T13:19:27.122818"
+    },
+    "1nx0oxk": {
+      "file": "data/reddit_data/posts/1nx0oxk.json",
+      "subreddit": "Python",
+      "stored_at": "2025-10-04T13:19:27.129608"
+    },
+    "1ntmao7": {
+      "file": "data/reddit_data/posts/1ntmao7.json",
+      "subreddit": "Python",
+      "stored_at": "2025-10-04T13:19:27.145993"
+    },
+    "1nv3tgp": {
+      "file": "data/reddit_data/posts/1nv3tgp.json",
+      "subreddit": "Python",
+      "stored_at": "2025-10-04T13:19:27.166651"
+    },
+    "1nuaqe8": {
+      "file": "data/reddit_data/posts/1nuaqe8.json",
+      "subreddit": "Python",
+      "stored_at": "2025-10-04T13:19:27.186016"
+    },
+    "1nsa5ae": {
+      "file": "data/reddit_data/posts/1nsa5ae.json",
+      "subreddit": "Python",
+      "stored_at": "2025-10-04T12:05:17.471664"
+    },
+    "1nxf9sn": {
+      "file": "data/reddit_data/posts/1nxf9sn.json",
+      "subreddit": "Python",
+      "stored_at": "2025-10-04T12:05:17.478251"
+    },
+    "1nx3hkg": {
+      "file": "data/reddit_data/posts/1nx3hkg.json",
+      "subreddit": "Python",
+      "stored_at": "2025-10-04T12:05:17.525474"
+    },
+    "1nx12sv": {
+      "file": "data/reddit_data/posts/1nx12sv.json",
+      "subreddit": "Python",
+      "stored_at": "2025-10-04T12:05:17.544668"
+    },
+    "1nxfyl8": {
+      "file": "data/reddit_data/posts/1nxfyl8.json",
+      "subreddit": "MachineLearning",
+      "stored_at": "2025-10-04T12:13:30.263689"
+    },
+    "1nxb9bp": {
+      "file": "data/reddit_data/posts/1nxb9bp.json",
+      "subreddit": "MachineLearning",
+      "stored_at": "2025-10-04T12:13:30.270635"
+    },
+    "1nwwsk7": {
+      "file": "data/reddit_data/posts/1nwwsk7.json",
+      "subreddit": "MachineLearning",
+      "stored_at": "2025-10-04T12:13:30.295389"
+    },
+    "1nwoxqz": {
+      "file": "data/reddit_data/posts/1nwoxqz.json",
+      "subreddit": "MachineLearning",
+      "stored_at": "2025-10-04T12:13:30.315438"
+    },
+    "1nwhihj": {
+      "file": "data/reddit_data/posts/1nwhihj.json",
+      "subreddit": "MachineLearning",
+      "stored_at": "2025-10-04T12:13:30.333863"
+    },
+    "1nwfn4j": {
+      "file": "data/reddit_data/posts/1nwfn4j.json",
+      "subreddit": "MachineLearning",
+      "stored_at": "2025-10-04T12:13:30.357927"
+    },
+    "1nwaunk": {
+      "file": "data/reddit_data/posts/1nwaunk.json",
+      "subreddit": "MachineLearning",
+      "stored_at": "2025-10-04T12:13:30.373348"
+    },
+    "1nwanih": {
+      "file": "data/reddit_data/posts/1nwanih.json",
+      "subreddit": "MachineLearning",
+      "stored_at": "2025-10-04T12:13:30.392991"
+    },
+    "1nw8ql3": {
+      "file": "data/reddit_data/posts/1nw8ql3.json",
+      "subreddit": "MachineLearning",
+      "stored_at": "2025-10-04T12:13:30.411469"
+    },
+    "1nw6jqf": {
+      "file": "data/reddit_data/posts/1nw6jqf.json",
+      "subreddit": "MachineLearning",
+      "stored_at": "2025-10-04T12:13:30.431199"
+    },
+    "1nu0gdd": {
+      "file": "data/reddit_data/posts/1nu0gdd.json",
+      "subreddit": "Python",
+      "stored_at": "2025-10-04T13:19:27.205732"
+    },
+    "1leh4wm": {
+      "file": "data/reddit_data/posts/1leh4wm.json",
+      "subreddit": "datascience",
+      "stored_at": "2025-10-04T13:26:09.135161"
+    },
+    "1ku31vc": {
+      "file": "data/reddit_data/posts/1ku31vc.json",
+      "subreddit": "datascience",
+      "stored_at": "2025-10-04T13:26:09.141012"
+    },
+    "1mrtysu": {
+      "file": "data/reddit_data/posts/1mrtysu.json",
+      "subreddit": "recruitinghell",
+      "stored_at": "2025-10-04T13:26:09.171076"
+    },
+    "1kekweq": {
+      "file": "data/reddit_data/posts/1kekweq.json",
+      "subreddit": "learnmachinelearning",
+      "stored_at": "2025-10-04T13:26:09.190270"
+    },
+    "1lluwlv": {
+      "file": "data/reddit_data/posts/1lluwlv.json",
+      "subreddit": "datascience",
+      "stored_at": "2025-10-04T13:26:09.210114"
+    },
+    "1ndh577": {
+      "file": "data/reddit_data/posts/1ndh577.json",
+      "subreddit": "learnmachinelearning",
+      "stored_at": "2025-10-04T13:26:09.227916"
+    },
+    "1jzs08d": {
+      "file": "data/reddit_data/posts/1jzs08d.json",
+      "subreddit": "csMajors",
+      "stored_at": "2025-10-04T13:26:09.253012"
+    },
+    "1np6k4c": {
+      "file": "data/reddit_data/posts/1np6k4c.json",
+      "subreddit": "careerguidance",
+      "stored_at": "2025-10-04T13:26:09.271601"
+    },
+    "1kt71im": {
+      "file": "data/reddit_data/posts/1kt71im.json",
+      "subreddit": "CollegeMajors",
+      "stored_at": "2025-10-04T13:26:09.293470"
+    },
+    "jfyxod": {
+      "file": "data/reddit_data/posts/jfyxod.json",
+      "subreddit": "dataisbeautiful",
+      "stored_at": "2025-10-04T13:26:09.314939"
+    },
+    "wzyy9o": {
+      "file": "data/reddit_data/posts/wzyy9o.json",
+      "subreddit": "SelfAwarewolves",
+      "stored_at": "2025-10-04T13:26:09.334116"
+    },
+    "1befxgm": {
+      "file": "data/reddit_data/posts/1befxgm.json",
+      "subreddit": "PoliticalCompassMemes",
+      "stored_at": "2025-10-04T13:26:09.352494"
+    },
+    "1hp7pim": {
+      "file": "data/reddit_data/posts/1hp7pim.json",
+      "subreddit": "datascience",
+      "stored_at": "2025-10-04T13:26:09.372217"
+    },
+    "1hceuqr": {
+      "file": "data/reddit_data/posts/1hceuqr.json",
+      "subreddit": "RomanceBooks",
+      "stored_at": "2025-10-04T13:26:09.389579"
+    },
+    "1bblgem": {
+      "file": "data/reddit_data/posts/1bblgem.json",
+      "subreddit": "theworldnews",
+      "stored_at": "2025-10-04T13:26:09.409386"
+    },
+    "1mpx8zp": {
+      "file": "data/reddit_data/posts/1mpx8zp.json",
+      "subreddit": "ProgrammerHumor",
+      "stored_at": "2025-10-04T13:26:09.428676"
+    },
+    "1f2fjlo": {
+      "file": "data/reddit_data/posts/1f2fjlo.json",
+      "subreddit": "labrats",
+      "stored_at": "2025-10-04T13:26:09.447250"
+    },
+    "18m1oev": {
+      "file": "data/reddit_data/posts/18m1oev.json",
+      "subreddit": "csMajors",
+      "stored_at": "2025-10-04T13:26:09.468984"
+    },
+    "1iq0gwj": {
+      "file": "data/reddit_data/posts/1iq0gwj.json",
+      "subreddit": "datascience",
+      "stored_at": "2025-10-04T13:26:09.489890"
+    },
+    "1en7t9g": {
+      "file": "data/reddit_data/posts/1en7t9g.json",
+      "subreddit": "datascience",
+      "stored_at": "2025-10-04T13:26:09.506014"
+    },
+    "1nxrrcw": {
+      "file": "data/reddit_data/posts/1nxrrcw.json",
+      "subreddit": "datascience",
+      "stored_at": "2025-10-04T13:27:22.911793"
+    },
+    "1nxqln5": {
+      "file": "data/reddit_data/posts/1nxqln5.json",
+      "subreddit": "datascience",
+      "stored_at": "2025-10-04T13:27:22.922404"
+    },
+    "1nwh00i": {
+      "file": "data/reddit_data/posts/1nwh00i.json",
+      "subreddit": "datascience",
+      "stored_at": "2025-10-04T13:27:22.951627"
+    },
+    "1nvduc2": {
+      "file": "data/reddit_data/posts/1nvduc2.json",
+      "subreddit": "datascience",
+      "stored_at": "2025-10-04T13:27:22.969361"
+    },
+    "1nv7767": {
+      "file": "data/reddit_data/posts/1nv7767.json",
+      "subreddit": "datascience",
+      "stored_at": "2025-10-04T13:27:22.985740"
+    },
+    "1nv6wv8": {
+      "file": "data/reddit_data/posts/1nv6wv8.json",
+      "subreddit": "datascience",
+      "stored_at": "2025-10-04T13:27:23.007166"
+    },
+    "1nv4wdg": {
+      "file": "data/reddit_data/posts/1nv4wdg.json",
+      "subreddit": "datascience",
+      "stored_at": "2025-10-04T13:27:23.024175"
+    },
+    "1nv0lfh": {
+      "file": "data/reddit_data/posts/1nv0lfh.json",
+      "subreddit": "datascience",
+      "stored_at": "2025-10-04T13:27:23.046636"
+    },
+    "1nurg0y": {
+      "file": "data/reddit_data/posts/1nurg0y.json",
+      "subreddit": "datascience",
+      "stored_at": "2025-10-04T13:27:23.082086"
+    },
+    "1nucvgd": {
+      "file": "data/reddit_data/posts/1nucvgd.json",
+      "subreddit": "datascience",
+      "stored_at": "2025-10-04T13:27:23.092246"
+    },
+    "1ntmrix": {
+      "file": "data/reddit_data/posts/1ntmrix.json",
+      "subreddit": "datascience",
+      "stored_at": "2025-10-04T13:27:23.112683"
+    },
+    "1ntlgy5": {
+      "file": "data/reddit_data/posts/1ntlgy5.json",
+      "subreddit": "datascience",
+      "stored_at": "2025-10-04T13:27:23.132734"
+    },
+    "1nt8wl0": {
+      "file": "data/reddit_data/posts/1nt8wl0.json",
+      "subreddit": "datascience",
+      "stored_at": "2025-10-04T13:27:23.152444"
+    },
+    "1nt8d65": {
+      "file": "data/reddit_data/posts/1nt8d65.json",
+      "subreddit": "datascience",
+      "stored_at": "2025-10-04T13:27:23.169980"
+    },
+    "1nt6q59": {
+      "file": "data/reddit_data/posts/1nt6q59.json",
+      "subreddit": "datascience",
+      "stored_at": "2025-10-04T13:27:23.182344"
+    },
+    "1k17rbr": {
+      "file": "data/reddit_data/posts/1k17rbr.json",
+      "subreddit": "PhD",
+      "stored_at": "2025-10-04T21:23:12.618944"
+    },
+    "1nfu6b8": {
+      "file": "data/reddit_data/posts/1nfu6b8.json",
+      "subreddit": "Btechtards",
+      "stored_at": "2025-10-04T21:23:12.629536"
+    },
+    "1kd8020": {
+      "file": "data/reddit_data/posts/1kd8020.json",
+      "subreddit": "DSP",
+      "stored_at": "2025-10-04T21:23:12.649363"
+    },
+    "1kus0i1": {
+      "file": "data/reddit_data/posts/1kus0i1.json",
+      "subreddit": "OMSCS",
+      "stored_at": "2025-10-04T21:23:12.667904"
+    },
+    "1j68n0q": {
+      "file": "data/reddit_data/posts/1j68n0q.json",
+      "subreddit": "learnmachinelearning",
+      "stored_at": "2025-10-04T21:23:12.683305"
+    }
+  },
+  "comments": {},
+  "users": {
+    "Kind_Bag5808": {
+      "file": "data/reddit_data/users/Kind_Bag5808_complete.json",
+      "stored_at": "2025-10-04T15:51:33.737326"
+    }
+  },
+  "subreddits": {},
+  "searches": [
+    {
+      "search_id": "search_20251004_115120_artificial_intelligence",
+      "query": "artificial intelligence",
+      "file": "data/reddit_data/searches/search_20251004_115120_artificial_intelligence.json",
+      "count": 5,
+      "timestamp": "2025-10-04T11:51:20.939888"
+    },
+    {
+      "search_id": "search_20251004_132609_data_science",
+      "query": "data science",
+      "file": "data/reddit_data/searches/search_20251004_132609_data_science.json",
+      "count": 20,
+      "timestamp": "2025-10-04T13:26:09.528384"
+    },
+    {
+      "search_id": "search_20251004_212312_machine_learning",
+      "query": "machine learning",
+      "file": "data/reddit_data/searches/search_20251004_212312_machine_learning.json",
+      "count": 5,
+      "timestamp": "2025-10-04T21:23:12.704463"
+    }
+  ],
+  "created_at": "2025-10-04T11:13:24.491202",
+  "last_updated": "2025-10-04T21:23:12.704480"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "1nwaunk",
+  "title": "[D] How much should researchers (especially in ML domain) rely on LLMs for their work?",
+  "selftext": "Are ML researchers using LLMs like ChatGPT, Claude, or other open-source models to generate, test, or refine minor ideas as tweaks to their original research, or to ask big-picture questions about their overall plans? In what other ways are publishing researchers using LLMs to support their work? (Of course, I don’t mean those who literally ask ChatGPT to write a paper from scratch.)\n\nI sometimes feel guilty when I feed a paper into ChatGPT and ask it to summarize or even extract “ideas” from it, which I then try to combine with my own. I want to understand where a researcher should draw the line in using LLMs in their daily workflow, so as not to fool themselves into believing they are doing good research while over-relying on the tool.",
+  "author": "etoipi1",
+  "subreddit": "MachineLearning",
+  "created_utc": "2025-10-02T18:53:20",
+  "score": 34,
+  "upvote_ratio": 0.8,
+  "num_comments": 53,
+  "permalink": "/r/MachineLearning/comments/1nwaunk/d_how_much_should_researchers_especially_in_ml/",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1nwaunk/d_how_much_should_researchers_especially_in_ml/",
+  "is_self": true,
+  "is_video": false,
+  "over_18": false,
+  "link_flair_text": "Discussion",
+  "retrieved_at": "2025-10-04T12:13:30.257093"
+}

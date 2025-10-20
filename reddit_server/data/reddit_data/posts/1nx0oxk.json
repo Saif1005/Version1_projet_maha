@@ -1,0 +1,18 @@
+{
+  "id": "1nx0oxk",
+  "title": "PEP 810 – Explicit lazy imports",
+  "selftext": "PEP: https://pep-previews--4622.org.readthedocs.build/pep-0810/\n\nDiscussion: https://discuss.python.org/t/pep-810-explicit-lazy-imports/104131\n\nThis PEP introduces lazy imports as an explicit language feature. Currently, a module is eagerly loaded at the point of the import statement. Lazy imports defer the loading and execution of a module until the first time the imported name is used.\n\nBy allowing developers to mark individual imports as lazy with explicit syntax, Python programs can reduce startup time, memory usage, and unnecessary work. This is particularly beneficial for command-line tools, test suites, and applications with large dependency graphs.\n\nThe proposal preserves full backwards compatibility: normal import statements remain unchanged, and lazy imports are enabled only where explicitly requested.",
+  "author": "JanEric1",
+  "subreddit": "Python",
+  "created_utc": "2025-10-03T15:28:35",
+  "score": 382,
+  "upvote_ratio": 0.98,
+  "num_comments": 124,
+  "permalink": "/r/Python/comments/1nx0oxk/pep_810_explicit_lazy_imports/",
+  "url": "https://www.reddit.com/r/Python/comments/1nx0oxk/pep_810_explicit_lazy_imports/",
+  "is_self": true,
+  "link_flair_text": "News",
+  "retrieved_at": "2025-10-04T13:19:27.117690",
+  "is_video": false,
+  "over_18": false
+}

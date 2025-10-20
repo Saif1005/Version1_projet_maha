@@ -1,0 +1,18 @@
+{
+  "id": "1nxqln5",
+  "title": "Do you know interesting datasets for kriging?",
+  "selftext": "Hi guys, I need to do a project using many linear models and I’m looking for a dataset. Ideally something interesting with lots of numerical variables, especially one where kriging could be applied.\n\nIf you have any dataset suggestions or interesting research questions I could build the project around, I’d really appreciate it. Thanks a lot!\n\nPS: i did not like chatgpt suggestions, they were cliche (even if i explicitly asked “not cliche”)",
+  "author": "FinalRide7181",
+  "subreddit": "datascience",
+  "created_utc": "2025-10-04T11:38:16",
+  "score": 2,
+  "upvote_ratio": 1.0,
+  "num_comments": 1,
+  "permalink": "/r/datascience/comments/1nxqln5/do_you_know_interesting_datasets_for_kriging/",
+  "url": "https://www.reddit.com/r/datascience/comments/1nxqln5/do_you_know_interesting_datasets_for_kriging/",
+  "is_self": true,
+  "link_flair_text": "Projects",
+  "retrieved_at": "2025-10-04T13:27:22.904996",
+  "is_video": false,
+  "over_18": false
+}

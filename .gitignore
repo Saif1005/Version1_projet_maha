@@ -1,0 +1,24 @@
+# Environnements virtuels
+.venv/
+venv/
+
+# Caches Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Fichiers de logs et temporaires
+*.log
+*.tmp
+
+# Données locales
+.env
+*.sqlite3
+data/
+storage/
+
+# Dossiers systèmes
+.DS_Store
+.idea/
+.vscode/

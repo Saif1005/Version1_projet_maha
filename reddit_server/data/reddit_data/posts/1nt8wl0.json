@@ -1,0 +1,18 @@
+{
+  "id": "1nt8wl0",
+  "title": "What a Drunk Man Can Teach Us About Time Series Forecasting",
+  "selftext": "**Autocorrelation & The Random Walk explained** with a drunk man 🍺\n\nLet me illustrate this statistical concept with an example we can all visualize.\n\nImagine a drunk man wandering a city. His steps are completely random and unpredictable.\n\n**Here's the intuition**:\n\n\\- His current position is completely tied to his previous position\n\n\\- We know where he is RIGHT NOW, but have no idea where he'll be in the next minute\n\n**The statistical insight**:\n\nIn a random walk, the *current position* is highly correlated with the *previous position*, but the *changes in position* (the steps) are completely random & uncorrelated.\n\n\n\nThis is why random walks are so tricky to forecast!\n\n[Part 2: Time Series Forecasting: Build a Baseline & Understand the Random Walk](https://youtu.be/_Ke54TJqY9s) \n\n  \nWould love to hear your **thoughts, feedback** about this topic",
+  "author": "The_Simpsons_22",
+  "subreddit": "datascience",
+  "created_utc": "2025-09-29T05:31:25",
+  "score": 59,
+  "upvote_ratio": 0.78,
+  "num_comments": 9,
+  "permalink": "/r/datascience/comments/1nt8wl0/what_a_drunk_man_can_teach_us_about_time_series/",
+  "url": "https://www.reddit.com/r/datascience/comments/1nt8wl0/what_a_drunk_man_can_teach_us_about_time_series/",
+  "is_self": true,
+  "link_flair_text": "Education",
+  "retrieved_at": "2025-10-04T13:27:22.905112",
+  "is_video": false,
+  "over_18": false
+}

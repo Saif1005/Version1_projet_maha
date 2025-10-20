@@ -1,0 +1,18 @@
+{
+  "id": "1nuaqe8",
+  "title": "Stories from running a workflow engine, e.g., Hatchet, in Production",
+  "selftext": "Hi everybody! I find myself in need of a workflow engine (I'm DevOps, so I'll be using it and administering it), and it seems the Python space is exploding with options right now. I'm passingly familiar with Celery+Canvas and DAG-based tools such as Airflow, but the hot new thing seems to be Durable Execution frameworks like Temporal.io, DBOS, Hatchet, etc. I'd love to hear stories from people actually using and managing such things in the wild, as part of evaluating which option is best for me.\n\nJust from reading over these projects docs, I can give my initial impressions:\n\n* Temporal.io - enterprise-ready, lots of operational bits and bobs to manage, seems to want to take over your entire project\n* DBOS - way less operational impact, but also no obvious way to horizontally scale workers independent of app servers (which is sort of a key feature for me)\n* Hatchet - evolving fast, Durable Execution/Workflow bits seem fairly recent, no obvious way to logically segment queues, etc. by tenant (Temporal has Namespaces, Celery+Canvas has Virtual Hosts in RabbitMQ, DBOS… might be leveraging your app database, so it inherits whatever you are doing there?)\n\nAm I missing any of the big (Python) players? What has your experience been like?",
+  "author": "gthank",
+  "subreddit": "Python",
+  "created_utc": "2025-09-30T12:34:07",
+  "score": 102,
+  "upvote_ratio": 0.98,
+  "num_comments": 13,
+  "permalink": "/r/Python/comments/1nuaqe8/stories_from_running_a_workflow_engine_eg_hatchet/",
+  "url": "https://www.reddit.com/r/Python/comments/1nuaqe8/stories_from_running_a_workflow_engine_eg_hatchet/",
+  "is_self": true,
+  "link_flair_text": "Discussion",
+  "retrieved_at": "2025-10-04T13:19:27.117702",
+  "is_video": false,
+  "over_18": false
+}

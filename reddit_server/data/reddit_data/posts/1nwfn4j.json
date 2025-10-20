@@ -1,0 +1,18 @@
+{
+  "id": "1nwfn4j",
+  "title": "[R] Thesis direction: mechanistic interpretability vs semantic probing of LLM reasoning?",
+  "selftext": "Hi all,\n\nI'm an undergrad Computer Science student working or my senior thesis, and l'll have about 8 months to dedicate to it nearly full-time. My broad interest is in reasoning, and I'm trying to decide between two directions:\n\n• Mechanistic interpretability (low-level): reverse engineering smaller neural networks, analyzing weights/ activations, simple logic gates, and tracking learning dynamics.\n\n•Semantic probing (high-level): designing behavioral tasks for LLMs, probing reasoning, attention/locality, and consistency of inference.\n\nFor context, after graduation I'll be joining a GenAl team as a software engineer. The role will likely lean more full-stack/frontend at first, but my long-term goal is to transition into backend.\n\nI'd like the thesis to be rigorous but also build skills that will be useful for my long-term goal of becoming a software engineer. From your perspective, which path might be more valuable in terms that of feasibility, skill development, and career impact?\n\nThanks in advance for your advice!",
+  "author": "powerpuff___",
+  "subreddit": "MachineLearning",
+  "created_utc": "2025-10-02T21:50:44",
+  "score": 11,
+  "upvote_ratio": 0.79,
+  "num_comments": 13,
+  "permalink": "/r/MachineLearning/comments/1nwfn4j/r_thesis_direction_mechanistic_interpretability/",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1nwfn4j/r_thesis_direction_mechanistic_interpretability/",
+  "is_self": true,
+  "is_video": false,
+  "over_18": false,
+  "link_flair_text": "Research",
+  "retrieved_at": "2025-10-04T12:13:30.257091"
+}

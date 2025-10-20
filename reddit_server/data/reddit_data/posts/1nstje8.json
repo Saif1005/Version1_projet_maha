@@ -1,0 +1,18 @@
+{
+  "id": "1nstje8",
+  "title": "Stop uploading your code to sketchy “online obfuscators” like freecodingtools.org",
+  "selftext": "So I googled one of those “free online Python obfuscor things” (say, freecodingtools.org) and oh boy… I have to rant for a minute.\n\nYou sell pitch is just “just paste your code in this box and we’ll keep it for you.” Right. Because clearly the best way to keep your intellectual property is to deposit it on a who-knows-what site you’ve never ever known, owned and operated people you’ll never ever meet, with no idea anywhere your source goes. Completely secure.\n\nEven if you think the site will not retain a copy of your code, the real “obfuscation” is going to be farcical. We discuss base64, XOR, hex encoding, perhaps zlib compression, in a few spaghetti exec function calls. This isn’t security, painting and crafts. It can be unwritten anybody who possesses a ten-minute-half-decent Google. But geez, at least it does look menacing from a first glance, doesn’t it?\n\nYou actually experience a false sense of security and the true probability of having just opened your complete codebase to a dodgy server somewhere. And if you’re particularly unlucky, they’ll mail back to you a “protected” file that not only includes a delicious little backdoor but also one you’ll eagerly send off to your unsuspecting users. Well done, you just gave away supply-chain malware for free.\n\nIf you truly do want to protect code, there are actual tools for it. Cython runs to C extensions. Nuitka runs projects to native executables. Encrypts bytecode and does machine binding. Not tricks, but at least make it hard and come from people who don’t want your source comed to be pushed to their private webserver. And the actual solution? Don’t push secrets to begin with. Put keys and sensitive logic on a server people can’t touch.\n\nSo yeh… do not the next time your eyes glaze over at “just plug your Python code into our free web obfuscator.” Unless your security mindset is “keep my younger brother from cheating and reading my homework,” congratulations, your secret’s safe.",
+  "author": "GuiltyAd2976",
+  "subreddit": "Python",
+  "created_utc": "2025-09-28T18:03:25",
+  "score": 388,
+  "upvote_ratio": 0.88,
+  "num_comments": 55,
+  "permalink": "/r/Python/comments/1nstje8/stop_uploading_your_code_to_sketchy_online/",
+  "url": "https://www.reddit.com/r/Python/comments/1nstje8/stop_uploading_your_code_to_sketchy_online/",
+  "is_self": true,
+  "link_flair_text": "Discussion",
+  "retrieved_at": "2025-10-04T13:19:27.117676",
+  "is_video": false,
+  "over_18": false
+}

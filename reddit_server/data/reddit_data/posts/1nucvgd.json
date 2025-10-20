@@ -1,0 +1,18 @@
+{
+  "id": "1nucvgd",
+  "title": "Weekend Project - Poker Agents Video/Code",
+  "selftext": "Fun side project. You can configure (almost) any LLM as a player. The main capabilities (tools) each agent can call are:\n\n1) Hand Analysis\nGet detailed info about current hand and possibilities (straight draws, flush potential, many other things)\n\n2) Monte Carlo\nGet an estimated win probability if the player continues in the hand (can only be called one time per hand)\n\n3) Opponent Statistics\nGet metrics about opponent behavior, specifically how aggressive or passively they’ve played\n\nIt’s not a completely novel - other people have made LLMs play poker. The configurability and the specific callable tools are, to my knowledge, unique. Using it requires an OpenRouter API key.\n\n\nVideo:\nhttps://youtu.be/1PDo6-tcWfE?si=WR-vgYtmlksKCAm4\n\nCode:\nhttps://github.com/OlivierNDO/llm_poker_agents\n\n",
+  "author": "MLEngDelivers",
+  "subreddit": "datascience",
+  "created_utc": "2025-09-30T14:13:57",
+  "score": 55,
+  "upvote_ratio": 0.92,
+  "num_comments": 14,
+  "permalink": "/r/datascience/comments/1nucvgd/weekend_project_poker_agents_videocode/",
+  "url": "https://i.redd.it/hqdrczgwxasf1.jpeg",
+  "is_self": false,
+  "link_flair_text": "Projects",
+  "retrieved_at": "2025-10-04T13:27:22.905091",
+  "is_video": false,
+  "over_18": false
+}

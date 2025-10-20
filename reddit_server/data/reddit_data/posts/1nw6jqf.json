@@ -1,0 +1,18 @@
+{
+  "id": "1nw6jqf",
+  "title": "[R] Maths PhD student - Had an idea on diffusion",
+  "selftext": "I am a PhD student in Maths - high dimensional modeling. I had an idea for a future project, although since I am not too familiar with these concept, I would like to ask people who are, if I am thinking about this right and what your feedback is. \n\nTake diffusion for image generation. An overly simplified tldr description of what I understand is going on is this. Given pairs of (text, image) in the training set, the diffusion algorithm learns to predict the noise that was added to the image. It then creates a distribution of image concepts in a latent space so that it can generalize better. For example, let's say we had two concepts of images in our training set. One is of dogs eating ice cream and one is of parrots skateboarding. If during inference we asked the model to output a dog skateboarding, it would go to the latent space and sample an image which is somewhere \"in the middle\" of dogs eating ice cream and parrots skateboarding. And that image would be generated starting from random noise. \n\nSo my question is, can diffusion be used in the following way? Let's say I want the algorithm to output a vector of numbers (p) given an input vector of numbers (x), where this vector p would perform well based on a criterion I select. So the approach I am thinking is to first generate pairs of (x, p) for training, by generating \"random\" (or in some other way) vectors p, evaluating them and then keeping the best vectors as pairs with x. Then I would train the diffusion algorithm as usual. Finally, when I give the trained model a new vector x, it would be able to output a vector p which performs well given x. \n\n  \nPlease let me know if I have any mistakes in my thought process or if you think that would work in general. Thank you.",
+  "author": "5000marios",
+  "subreddit": "MachineLearning",
+  "created_utc": "2025-10-02T16:14:33",
+  "score": 24,
+  "upvote_ratio": 0.74,
+  "num_comments": 47,
+  "permalink": "/r/MachineLearning/comments/1nw6jqf/r_maths_phd_student_had_an_idea_on_diffusion/",
+  "url": "https://www.reddit.com/r/MachineLearning/comments/1nw6jqf/r_maths_phd_student_had_an_idea_on_diffusion/",
+  "is_self": true,
+  "is_video": false,
+  "over_18": false,
+  "link_flair_text": "Research",
+  "retrieved_at": "2025-10-04T12:13:30.257114"
+}

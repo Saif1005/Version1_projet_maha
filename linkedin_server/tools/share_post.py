@@ -46,7 +46,7 @@ class SharePostTool:
             params = LinkedInValidator.validate_share_post_params(arguments)
             
             text = params["text"]
-            print(f"📤 Partage d'un post sur LinkedIn...")
+            print(f" Partage d'un post sur LinkedIn...")
             
             post_result = self.api.share_post(
                 text=text,
@@ -61,7 +61,7 @@ class SharePostTool:
                 "result": post_result
             }
             
-            print(f"✅ Post partagé avec succès")
+            print(f"Post partagé avec succès")
             
             return [TextContent(
                 type="text",
@@ -78,7 +78,7 @@ class SharePostTool:
                 }, indent=2)
             )]
         except Exception as e:
-            print(f"❌ Erreur: {e}")
+            print(f" Erreur: {e}")
             return [TextContent(
                 type="text",
                 text=json.dumps({

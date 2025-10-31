@@ -66,7 +66,7 @@ class UserDataTool:
             params = RedditValidator.validate_username(arguments)
             
             username = params["username"]
-            print(f"👤 Collecte données: u/{username}")
+            print(f" Collecte données: u/{username}")
             
             # Collecter les données utilisateur
             user_data = self.api.get_user_data(
@@ -92,7 +92,7 @@ class UserDataTool:
                 "user_data": user_data
             }
             
-            print(f"✅ Données collectées pour u/{username}")
+            print(f"Données collectées pour u/{username}")
             print(f"   Posts: {result['posts_collected']}, Commentaires: {result['comments_collected']}")
             
             return [TextContent(

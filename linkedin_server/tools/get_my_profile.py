@@ -32,7 +32,7 @@ class GetMyProfileTool:
     async def execute(self, arguments: Dict[str, Any]) -> List[TextContent]:
         """Exécute la récupération du profil"""
         try:
-            print("👤 Récupération de votre profil LinkedIn...")
+            print(" Récupération de votre profil LinkedIn...")
             
             profile = self.api.get_my_profile()
             
@@ -44,7 +44,7 @@ class GetMyProfileTool:
                 "profile": profile
             }
             
-            print(f"✅ Profil récupéré: {profile.get('firstName')} {profile.get('lastName')}")
+            print(f" Profil récupéré: {profile.get('firstName')} {profile.get('lastName')}")
             
             return [TextContent(
                 type="text",
@@ -52,7 +52,7 @@ class GetMyProfileTool:
             )]
             
         except Exception as e:
-            print(f"❌ Erreur: {e}")
+            print(f" Erreur: {e}")
             return [TextContent(
                 type="text",
                 text=json.dumps({

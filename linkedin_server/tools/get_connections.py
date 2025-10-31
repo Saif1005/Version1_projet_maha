@@ -63,7 +63,7 @@ class GetConnectionsTool:
                 "connections": connections
             }
             
-            print(f"✅ {len(connections)} connexions récupérées")
+            print(f" {len(connections)} connexions récupérées")
             
             return [TextContent(
                 type="text",
@@ -80,7 +80,7 @@ class GetConnectionsTool:
                 }, indent=2)
             )]
         except Exception as e:
-            print(f"❌ Erreur: {e}")
+            print(f"Erreur: {e}")
             return [TextContent(
                 type="text",
                 text=json.dumps({

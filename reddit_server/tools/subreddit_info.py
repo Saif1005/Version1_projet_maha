@@ -50,7 +50,7 @@ class SubredditInfoTool:
             params = RedditValidator.validate_subreddit_name(arguments)
             
             subreddit = params["subreddit"]
-            print(f"ℹ️  Info subreddit: r/{subreddit}")
+            print(f"  Info subreddit: r/{subreddit}")
             
             # Collecter les informations
             info = self.api.get_subreddit_info(subreddit)
@@ -61,7 +61,7 @@ class SubredditInfoTool:
                 "info": info
             }
             
-            print(f"✅ Info r/{subreddit} collectée")
+            print(f" Info r/{subreddit} collectée")
             print(f"   Abonnés: {info.get('subscribers'):,}")
             
             return [TextContent(
@@ -79,7 +79,7 @@ class SubredditInfoTool:
                 }, indent=2)
             )]
         except Exception as e:
-            print(f"❌ Erreur: {e}")
+            print(f" Erreur: {e}")
             return [TextContent(
                 type="text",
                 text=json.dumps({

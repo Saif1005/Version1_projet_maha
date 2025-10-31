@@ -18,7 +18,7 @@ else
 fi
 
 echo "============================================================"
-echo "🚀 MCP SERVER LINKEDIN — démarrage pour Claude Desktop"
+echo " MCP SERVER LINKEDIN — démarrage pour Claude Desktop"
 echo "============================================================"
 
 # --- Démarre le serveur MCP ---

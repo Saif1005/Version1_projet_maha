@@ -61,12 +61,12 @@ class LinkedInMCPServer:
         self.server = Server("linkedin-mcp-server")
         self._setup_handlers()
         
-        print("✅ Serveur MCP LinkedIn initialisé")
-        print(f"   📁 Data directory: {self.config.DATA_DIR}")
+        print("Serveur MCP LinkedIn initialisé")
+        print(f"   Data directory: {self.config.DATA_DIR}")
         print(f"   🔧 Outils disponibles: {len(self.tools)}")
         
         if not LinkedInConfig.ACCESS_TOKEN:
-            print("\n⚠️  Access token non configuré!")
+            print("\n  Access token non configuré!")
             print(f"   URL d'autorisation: {self.auth.get_authorization_url()}")
     
     def _setup_handlers(self):
@@ -110,7 +110,7 @@ class LinkedInMCPServer:
                 return await tool.execute(arguments)
                 
             except Exception as e:
-                print(f"❌ Erreur outil '{name}': {e}")
+                print(f" Erreur outil '{name}': {e}")
                 import json
                 return [TextContent(
                     type="text",
@@ -134,7 +134,7 @@ class LinkedInMCPServer:
 async def main():
     """Point d'entrée principal"""
     print("\n" + "="*60)
-    print("🚀 MCP SERVER LINKEDIN")
+    print(" MCP SERVER LINKEDIN")
     print("="*60 + "\n")
     
     server = LinkedInMCPServer()
@@ -145,7 +145,7 @@ if __name__ == "__main__":
     try:
         asyncio.run(main())
     except KeyboardInterrupt:
-        print("\n\n👋 Arrêt du serveur LinkedIn")
+        print("\n\n Arrêt du serveur LinkedIn")
     except Exception as e:
-        print(f"\n❌ Erreur fatale: {e}")
+        print(f"\n Erreur fatale: {e}")
         raise

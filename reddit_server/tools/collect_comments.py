@@ -23,6 +23,7 @@ class CollectCommentsTool:
             name="collect_post_comments",
             description="Collecte un post Reddit avec tous ses commentaires. "
                        "Utile pour analyser les discussions sur un post spécifique.",
+                       
             inputSchema={
                 "type": "object",
                 "properties": {

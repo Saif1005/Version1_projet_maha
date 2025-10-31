@@ -46,7 +46,7 @@ class GetCompanyPostsTool:
             params = LinkedInValidator.validate_company_posts_params(arguments)
             
             company_id = params["company_id"]
-            print(f"📰 Récupération des posts de l'entreprise {company_id}...")
+            print(f" Récupération des posts de l'entreprise {company_id}...")
             
             posts = self.api.get_company_posts(
                 company_id=company_id,
@@ -63,7 +63,7 @@ class GetCompanyPostsTool:
                 "posts": posts
             }
             
-            print(f"✅ {len(posts)} posts récupérés")
+            print(f" {len(posts)} posts récupérés")
             
             return [TextContent(
                 type="text",
@@ -80,7 +80,7 @@ class GetCompanyPostsTool:
                 }, indent=2)
             )]
         except Exception as e:
-            print(f"❌ Erreur: {e}")
+            print(f" Erreur: {e}")
             return [TextContent(
                 type="text",
                 text=json.dumps({

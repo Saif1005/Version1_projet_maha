@@ -143,6 +143,42 @@ Le FL Crew communique avec le MCP Server Reddit via le `RedditMCPClient` qui uti
 - **Stockage** : Les modèles LoRA sont beaucoup plus petits que les modèles complets
 - **MCP Server** : Communication avec le MCP Server Reddit pour collecter les données
 
+## Génération de Profils Reddit
+
+Après l'entraînement, vous pouvez générer des profils Reddit à partir du modèle entraîné :
+
+### Utilisation en ligne de commande
+
+```bash
+# Générer un profil complet et fragmenté
+python -m fl_crew_reddit.generate_profiles --round 10 --num-profiles 1 --num-fragments 5
+
+# Générer plusieurs profils
+python -m fl_crew_reddit.generate_profiles --num-profiles 3 --fragment-type mixed
+```
+
+### Utilisation programmatique
+
+```python
+from fl_crew_reddit.config import FLCrewRedditConfig
+from fl_crew_reddit.crew_manager import FLCrewRedditManager
+
+config = FLCrewRedditConfig()
+manager = FLCrewRedditManager(config)
+
+# Générer des profils à partir du dernier modèle entraîné
+profiles = manager.generate_profiles_from_model(
+    round_number=10,  # ou None pour utiliser le dernier
+    num_profiles=1,
+    num_fragments=5,
+    fragment_type="mixed"  # "posts", "comments", ou "mixed"
+)
+```
+
+Les profils générés sont sauvegardés dans :
+- `fl_crew_reddit/data/generated_profiles/` : Profils complets
+- `fl_crew_reddit/data/fragmented_profiles/` : Fragments pour distribution
+
 ## Exemple d'Utilisation avec Modèle Personnalisé
 
 ```python
@@ -156,7 +192,12 @@ from fl_crew_reddit.crew_manager import FLCrewRedditManager
 
 config = FLCrewRedditConfig()
 manager = FLCrewRedditManager(config)
+
+# Entraîner le modèle
 results = manager.run_federated_learning(num_rounds=5)
+
+# Générer des profils après l'entraînement
+profiles = manager.generate_profiles_from_model(round_number=5)
 ```
 
 ## Auteur

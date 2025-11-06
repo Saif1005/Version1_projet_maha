@@ -1,0 +1,14 @@
+# Exemple de fichier terraform.tfvars
+# Copiez ce fichier vers terraform.tfvars et remplissez les valeurs
+
+aws_region        = "us-east-1"
+environment       = "prod"
+project_name      = "fl-crew-reddit"
+s3_bucket_name    = "fl-crew-reddit-prod-1234567890"  # Doit être unique globalement
+ec2_instance_type = "g4dn.xlarge"  # Instance avec GPU
+ecs_cluster_name  = "fl-crew-reddit-cluster"
+ecs_service_name  = "fl-crew-reddit-service"
+cpu_units         = 4096  # 4 vCPU
+memory_mb         = 8192  # 8 GB
+desired_count     = 1
+

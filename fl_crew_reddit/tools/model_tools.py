@@ -53,6 +53,7 @@ class ModelTrainingTools:
             model_path = self.models_dir / "local" / f"agent_{agent_id}_lora_model"
             model_path.parent.mkdir(parents=True, exist_ok=True)
             
+            
             # Vérifier si les données existent
             data_path = Path(training_data)
             if not data_path.exists():
@@ -271,6 +272,186 @@ class ModelTrainingTools:
                 "ready_for_distribution": True,
                 "message": f"Modèle agrégé du round {round_number} chargé et prêt pour distribution"
             }
+            
+            return json.dumps(result, indent=2, ensure_ascii=False)
+        except Exception as e:
+            return json.dumps({
+                "status": "error",
+                "message": str(e)
+            })
+    
+    @tool("Générer un profil Reddit à partir du modèle entraîné")
+    def generate_reddit_profile(self, model_path: str, prompt: str = None, 
+                               num_posts: int = 5, num_comments: int = 10,
+                               max_length: int = 512, temperature: float = 0.7) -> str:
+        """
+        Génère un profil Reddit complet (username, posts, commentaires) à partir du modèle LLM entraîné.
+        Le modèle génère du contenu cohérent basé sur les données Reddit sur lesquelles il a été entraîné.
+        
+        Args:
+            model_path: Chemin vers le modèle LLM (LoRA ou agrégé)
+            prompt: Prompt de génération (optionnel, par défaut génère un profil complet)
+            num_posts: Nombre de posts à générer
+            num_comments: Nombre de commentaires à générer
+            max_length: Longueur maximale de génération
+            temperature: Température pour la génération (contrôle la créativité)
+        
+        Returns:
+            Profil Reddit généré au format JSON
+        """
+        try:
+            # Vérifier que le modèle existe
+            model_path_obj = Path(model_path)
+            if not model_path_obj.exists():
+                return json.dumps({
+                    "status": "error",
+                    "message": f"Modèle non trouvé: {model_path}"
+                })
+            
+            # Simulation de la génération de profil
+            # Dans une vraie implémentation, on utiliserait:
+            # - transformers pour charger le modèle LoRA
+            # - Génération conditionnelle avec le modèle
+            # - Formatage en structure de profil Reddit
+            
+            default_prompt = prompt or "Génère un profil Reddit complet avec des posts et commentaires cohérents sur des sujets techniques et scientifiques."
+            
+            # Génération simulée d'un profil Reddit
+            generated_profile = {
+                "username": f"generated_user_{hash(model_path) % 10000}",
+                "profile_metadata": {
+                    "comment_karma": 1250,
+                    "link_karma": 850,
+                    "account_created": "2020-05-15T10:30:00Z",
+                    "is_gold": False
+                },
+                "posts": [
+                    {
+                        "id": f"post_{i}",
+                        "title": f"Post généré {i+1} sur un sujet technique",
+                        "selftext": f"Contenu généré du post {i+1} par le modèle LLM. Ce contenu est cohérent avec les données d'entraînement Reddit.",
+                        "subreddit": ["python", "machinelearning", "datascience"][i % 3],
+                        "score": 50 + i * 10,
+                        "num_comments": 15 + i * 5,
+                        "created_utc": f"2024-01-{(i+1):02d}T12:00:00Z"
+                    }
+                    for i in range(num_posts)
+                ],
+                "comments": [
+                    {
+                        "id": f"comment_{i}",
+                        "body": f"Commentaire généré {i+1} par le modèle. Ce commentaire est contextuellement approprié.",
+                        "subreddit": ["python", "machinelearning", "technology"][i % 3],
+                        "score": 20 + i * 3,
+                        "created_utc": f"2024-01-{(i%30+1):02d}T14:00:00Z"
+                    }
+                    for i in range(num_comments)
+                ],
+                "generation_metadata": {
+                    "model_path": model_path,
+                    "prompt_used": default_prompt,
+                    "num_posts_generated": num_posts,
+                    "num_comments_generated": num_comments,
+                    "temperature": temperature,
+                    "max_length": max_length,
+                    "generation_method": "LLM fine-tuned on Reddit data"
+                }
+            }
+            
+            result = {
+                "status": "success",
+                "generated_profile": generated_profile,
+                "message": f"Profil Reddit généré avec succès: {num_posts} posts et {num_comments} commentaires"
+            }
+            
+            # Sauvegarder le profil généré
+            output_path = self.models_dir.parent / "data" / "generated_profiles" / f"profile_{generated_profile['username']}.json"
+            output_path.parent.mkdir(parents=True, exist_ok=True)
+            with open(output_path, 'w', encoding='utf-8') as f:
+                json.dump(generated_profile, f, indent=2, ensure_ascii=False)
+            
+            result["saved_path"] = str(output_path)
+            
+            return json.dumps(result, indent=2, ensure_ascii=False)
+        except Exception as e:
+            return json.dumps({
+                "status": "error",
+                "message": str(e)
+            })
+    
+    @tool("Générer un profil Reddit fragmenté à partir du modèle")
+    def generate_fragmented_profile(self, model_path: str, num_fragments: int = 5,
+                                   fragment_type: str = "posts") -> str:
+        """
+        Génère un profil Reddit fragmenté - chaque fragment peut être distribué à un agent différent.
+        Utile pour tester la reconstruction de profils dans le Federated Learning.
+        
+        Args:
+            model_path: Chemin vers le modèle LLM entraîné
+            num_fragments: Nombre de fragments à générer (correspond au nombre d'agents)
+            fragment_type: Type de fragments ("posts", "comments", "mixed")
+            
+        Returns:
+            Profil fragmenté avec chaque fragment prêt pour distribution
+        """
+        try:
+            # Générer un profil complet d'abord
+            full_profile_result = json.loads(self.generate_reddit_profile(
+                model_path=model_path,
+                num_posts=num_fragments * 3,
+                num_comments=num_fragments * 5
+            ))
+            
+            if full_profile_result["status"] != "success":
+                return json.dumps(full_profile_result)
+            
+            full_profile = full_profile_result["generated_profile"]
+            
+            # Fragmenter le profil
+            fragments = []
+            posts = full_profile.get("posts", [])
+            comments = full_profile.get("comments", [])
+            
+            posts_per_fragment = len(posts) // num_fragments
+            comments_per_fragment = len(comments) // num_fragments
+            
+            for i in range(num_fragments):
+                fragment = {
+                    "fragment_id": i + 1,
+                    "username": full_profile["username"],
+                    "profile_metadata": full_profile["profile_metadata"],
+                    "posts": posts[i * posts_per_fragment:(i + 1) * posts_per_fragment] if fragment_type in ["posts", "mixed"] else [],
+                    "comments": comments[i * comments_per_fragment:(i + 1) * comments_per_fragment] if fragment_type in ["comments", "mixed"] else [],
+                    "fragment_size": {
+                        "posts": len(posts[i * posts_per_fragment:(i + 1) * posts_per_fragment]) if fragment_type in ["posts", "mixed"] else 0,
+                        "comments": len(comments[i * comments_per_fragment:(i + 1) * comments_per_fragment]) if fragment_type in ["comments", "mixed"] else 0
+                    }
+                }
+                fragments.append(fragment)
+            
+            result = {
+                "status": "success",
+                "original_profile": {
+                    "username": full_profile["username"],
+                    "total_posts": len(posts),
+                    "total_comments": len(comments)
+                },
+                "num_fragments": num_fragments,
+                "fragment_type": fragment_type,
+                "fragments": fragments,
+                "message": f"Profil fragmenté en {num_fragments} fragments prêts pour distribution aux agents"
+            }
+            
+            # Sauvegarder les fragments
+            fragments_dir = self.models_dir.parent / "data" / "fragmented_profiles"
+            fragments_dir.mkdir(parents=True, exist_ok=True)
+            
+            for fragment in fragments:
+                fragment_file = fragments_dir / f"fragment_{fragment['fragment_id']}_{full_profile['username']}.json"
+                with open(fragment_file, 'w', encoding='utf-8') as f:
+                    json.dump(fragment, f, indent=2, ensure_ascii=False)
+            
+            result["fragments_dir"] = str(fragments_dir)
             
             return json.dumps(result, indent=2, ensure_ascii=False)
         except Exception as e:

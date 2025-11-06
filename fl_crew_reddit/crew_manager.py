@@ -23,7 +23,8 @@ from .agents import (
     DataPreprocessorAgent,
     ModelTrainerAgent,
     AggregatorAgent,
-    EvaluatorAgent
+    EvaluatorAgent,
+    ProfileGeneratorAgent
 )
 
 
@@ -61,6 +62,7 @@ class FLCrewRedditManager:
         
         self.aggregator = AggregatorAgent(self.model_tools)
         self.evaluator = EvaluatorAgent(self.model_tools)
+        self.profile_generator = ProfileGeneratorAgent(self.model_tools)
         
         # Liste de tous les agents
         self.all_agents = [
@@ -71,7 +73,7 @@ class FLCrewRedditManager:
             self.evaluator.get_agent()
         ]
         
-        print(f"✅ FL Crew Reddit Manager initialisé avec {len(self.all_agents)} agents")
+        print(f" FL Crew Reddit Manager initialisé avec {len(self.all_agents)} agents")
     
     def create_collection_task(self) -> Task:
         """Crée la tâche de collecte de données"""
@@ -185,7 +187,7 @@ class FLCrewRedditManager:
             Résultats du round
         """
         print(f"\n{'='*60}")
-        print(f"🔄 Round {round_number} de Federated Learning")
+        print(f" Round {round_number} de Federated Learning")
         print(f"{'='*60}\n")
         
         results = {
@@ -197,7 +199,7 @@ class FLCrewRedditManager:
         try:
             # 1. Collecte de données (seulement au premier round)
             if round_number == 1:
-                print("📊 Étape 1: Collecte de données...")
+                print(" Étape 1: Collecte de données...")
                 collection_task = self.create_collection_task()
                 collection_crew = Crew(
                     agents=[self.data_collector.get_agent()],
@@ -210,7 +212,7 @@ class FLCrewRedditManager:
             
             # 2. Prétraitement (seulement au premier round)
             if round_number == 1:
-                print("\n🔧 Étape 2: Prétraitement des données...")
+                print("\n Étape 2: Prétraitement des données...")
                 preprocessing_task = self.create_preprocessing_task()
                 preprocessing_crew = Crew(
                     agents=[self.data_preprocessor.get_agent()],
@@ -222,7 +224,7 @@ class FLCrewRedditManager:
                 results["preprocessing"] = str(preprocessing_result)
             
             # 3. Entraînement local (chaque round)
-            print(f"\n🏋️ Étape 3: Entraînement local des agents...")
+            print(f"\n Étape 3: Entraînement local des agents...")
             training_tasks = [
                 self.create_training_task(agent_id=i+1)
                 for i in range(len(self.model_trainers))
@@ -238,7 +240,7 @@ class FLCrewRedditManager:
             results["training"] = str(training_result)
             
             # 4. Agrégation (chaque round)
-            print(f"\n🔗 Étape 4: Agrégation des modèles...")
+            print(f"\n Étape 4: Agrégation des modèles...")
             aggregation_task = self.create_aggregation_task(round_number)
             aggregation_crew = Crew(
                 agents=[self.aggregator.get_agent()],
@@ -250,7 +252,7 @@ class FLCrewRedditManager:
             results["aggregation"] = str(aggregation_result)
             
             # 5. Évaluation (chaque round)
-            print(f"\n📈 Étape 5: Évaluation du modèle...")
+            print(f"\n Étape 5: Évaluation du modèle...")
             evaluation_task = self.create_evaluation_task("aggregated")
             evaluation_crew = Crew(
                 agents=[self.evaluator.get_agent()],
@@ -262,12 +264,12 @@ class FLCrewRedditManager:
             results["evaluation"] = str(evaluation_result)
             
             results["status"] = "completed"
-            print(f"\n✅ Round {round_number} terminé avec succès!")
+            print(f"\n Round {round_number} terminé avec succès!")
             
         except Exception as e:
             results["status"] = "error"
             results["error"] = str(e)
-            print(f"\n❌ Erreur lors du round {round_number}: {e}")
+            print(f"\n Erreur lors du round {round_number}: {e}")
         
         return results
     
@@ -284,9 +286,9 @@ class FLCrewRedditManager:
         num_rounds = num_rounds or self.config.FEDERATION_ROUNDS
         
         print("\n" + "="*60)
-        print("🚀 DÉMARRAGE DU FEDERATED LEARNING - FL CREW REDDIT")
+        print(" DÉMARRAGE DU FEDERATED LEARNING - FL CREW REDDIT")
         print("="*60)
-        print(f"📋 Configuration:")
+        print(f" Configuration:")
         print(f"   - Nombre d'agents: {len(self.all_agents)}")
         print(f"   - Nombre de rounds: {num_rounds}")
         print(f"   - Modèle de base LLM: {self.config.BASE_LLM_MODEL}")
@@ -329,10 +331,10 @@ class FLCrewRedditManager:
         self._save_results(all_results, "final")
         
         print("\n" + "="*60)
-        print("🎉 FEDERATED LEARNING TERMINÉ!")
+        print(" FEDERATED LEARNING TERMINÉ!")
         print("="*60)
-        print(f"✅ {num_rounds} rounds complétés")
-        print(f"📁 Résultats sauvegardés dans: {self.config.RESULTS_DIR}")
+        print(f"{num_rounds} rounds complétés")
+        print(f" Résultats sauvegardés dans: {self.config.RESULTS_DIR}")
         print("="*60 + "\n")
         
         return all_results
@@ -342,5 +344,122 @@ class FLCrewRedditManager:
         results_file = self.config.RESULTS_DIR / f"fl_results_{identifier}.json"
         with open(results_file, 'w', encoding='utf-8') as f:
             json.dump(results, f, indent=2, ensure_ascii=False)
-        print(f"💾 Résultats sauvegardés: {results_file}")
+        print(f" Résultats sauvegardés: {results_file}")
+    
+    def generate_profiles_from_model(self, round_number: int = None, 
+                                    num_profiles: int = 1,
+                                    num_fragments: int = 5,
+                                    fragment_type: str = "mixed") -> Dict[str, Any]:
+        """
+        Génère des profils Reddit à partir du modèle entraîné
+        
+        Args:
+            round_number: Numéro du round (utilise le dernier round si None)
+            num_profiles: Nombre de profils à générer
+            num_fragments: Nombre de fragments par profil (pour profils fragmentés)
+            fragment_type: Type de fragments ("posts", "comments", "mixed")
+            
+        Returns:
+            Résultats de la génération de profils
+        """
+        print("\n" + "="*60)
+        print(" GÉNÉRATION DE PROFILS REDDIT")
+        print("="*60)
+        
+        # Trouver le dernier round si non spécifié
+        if round_number is None:
+            aggregated_dir = self.config.AGGREGATED_MODELS_DIR
+            rounds = []
+            for path in aggregated_dir.glob("aggregated_lora_model_round_*"):
+                try:
+                    round_num = int(path.name.split("_")[-1])
+                    rounds.append(round_num)
+                except:
+                    pass
+            round_number = max(rounds) if rounds else 1
+            print(f" Utilisation du modèle du round {round_number}")
+        
+        model_path = self.config.AGGREGATED_MODELS_DIR / f"aggregated_lora_model_round_{round_number}"
+        
+        if not model_path.exists():
+            print(f" Modèle du round {round_number} non trouvé: {model_path}")
+            return {"status": "error", "message": f"Modèle non trouvé: {model_path}"}
+        
+        print(f" Modèle utilisé: {model_path}")
+        print(f" Génération de {num_profiles} profil(s)")
+        print("="*60 + "\n")
+        
+        from crewai import Crew, Process, Task
+        
+        all_generated_profiles = []
+        
+        for i in range(num_profiles):
+            print(f" Génération du profil {i+1}/{num_profiles}...")
+            
+            # Créer la tâche de génération
+            generation_task = Task(
+                description=f"""
+                Génère un profil Reddit complet et fragmenté à partir du modèle entraîné.
+                
+                Tu dois:
+                1. Charger le modèle agrégé du round {round_number}
+                2. Générer un profil Reddit complet avec posts et commentaires
+                3. Fragmenter le profil en {num_fragments} fragments pour distribution
+                4. Sauvegarder le profil complet et les fragments
+                
+                Le profil doit être réaliste et cohérent avec les données d'entraînement Reddit.
+                Type de fragments: {fragment_type}
+                """,
+                agent=self.profile_generator.get_agent(),
+                expected_output=f"Profil Reddit généré et fragmenté en {num_fragments} fragments, sauvegardé avec succès"
+            )
+            
+            # Exécuter la génération
+            generation_crew = Crew(
+                agents=[self.profile_generator.get_agent()],
+                tasks=[generation_task],
+                process=Process.sequential,
+                verbose=True
+            )
+            
+            try:
+                result = generation_crew.kickoff()
+                all_generated_profiles.append({
+                    "profile_number": i + 1,
+                    "result": str(result),
+                    "status": "success"
+                })
+                print(f" Profil {i+1} généré avec succès\n")
+            except Exception as e:
+                all_generated_profiles.append({
+                    "profile_number": i + 1,
+                    "status": "error",
+                    "error": str(e)
+                })
+                print(f" Erreur lors de la génération du profil {i+1}: {e}\n")
+        
+        results = {
+            "round_number": round_number,
+            "model_path": str(model_path),
+            "num_profiles": num_profiles,
+            "num_fragments": num_fragments,
+            "fragment_type": fragment_type,
+            "generated_profiles": all_generated_profiles,
+            "timestamp": datetime.now().isoformat()
+        }
+        
+        # Sauvegarder les résultats
+        results_file = self.config.RESULTS_DIR / f"generated_profiles_round_{round_number}.json"
+        with open(results_file, 'w', encoding='utf-8') as f:
+            json.dump(results, f, indent=2, ensure_ascii=False)
+        
+        print("="*60)
+        print(" GÉNÉRATION DE PROFILS TERMINÉE")
+        print("="*60)
+        print(f" Profils sauvegardés dans: {self.config.DATA_DIR / 'generated_profiles'}")
+        print(f" Fragments sauvegardés dans: {self.config.DATA_DIR / 'fragmented_profiles'}")
+        print(f" Résultats: {results_file}")
+        print("="*60 + "\n")
+        
+        return results
 

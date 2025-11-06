@@ -1,0 +1,52 @@
+# Fichiers à exclure du build Docker
+.git
+.gitignore
+.venv
+venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info
+dist
+build
+.pytest_cache
+.coverage
+htmlcov
+.env
+.env.local
+*.log
+.DS_Store
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# Données et modèles (seront dans S3)
+data/
+models/
+logs/
+results/
+*.pkl
+*.pt
+*.pth
+*.h5
+*.ckpt
+
+# Terraform
+terraform/.terraform
+terraform/*.tfstate
+terraform/*.tfstate.backup
+terraform/.terraform.lock.hcl
+
+# Documentation
+*.md
+!README.md
+
+# Scripts de déploiement
+scripts/
+

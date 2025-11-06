@@ -1,0 +1,54 @@
+# CrewAI - Framework multi-agents
+crewai>=0.1.0
+crewai-tools>=0.1.0
+
+# LangChain pour les LLMs (orchestration des agents)
+langchain>=0.1.0
+langchain-openai>=0.0.5
+langchain-community>=0.0.20
+
+# OpenAI (ou autre provider LLM pour orchestration)
+openai>=1.0.0
+
+# Transformers et Hugging Face pour les LLMs
+transformers>=4.35.0
+accelerate>=0.24.0
+peft>=0.6.0  # Pour LoRA/QLoRA fine-tuning
+bitsandbytes>=0.41.0  # Pour QLoRA (quantization)
+datasets>=2.14.0  # Pour gérer les datasets Hugging Face
+
+# Vision-Language Models (pour données multimodales)
+torch>=2.0.0
+torchvision>=0.15.0
+pillow>=10.0.0  # Pour traitement d'images
+sentencepiece>=0.1.99  # Pour tokenization
+
+# Configuration
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+
+# Utilities
+aiohttp>=3.9.0
+aiofiles>=23.0.0
+
+# AWS SDK
+boto3>=1.28.0
+botocore>=1.31.0
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Machine Learning et évaluation
+scikit-learn>=1.3.0
+nltk>=3.8.0  # Pour métriques BLEU/ROUGE
+rouge-score>=0.1.2  # Pour métriques ROUGE
+
+# Logging
+colorlog>=6.7.0
+
+# Testing (optional)
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+
